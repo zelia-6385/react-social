@@ -5,7 +5,8 @@ import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
+// import Dialogs from './components/Dialogs/Dialogs';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 
 // import { render } from '@testing-library/react';
 
@@ -17,12 +18,10 @@ const App = (props) => {
             <div className="app-wrapper-content">
                 {/* <Route path="/dialogs" component={Dialogs} />
                     <Route path="/profile" component={Profile} /> */}
-                <Route path="/dialogs" render={() => <Dialogs store={props.store} />} />
+                <Route path="/dialogs" render={() => <DialogsContainer store={props.store} />} />
                 <Route
                     path="/profile"
-                    render={() => (
-                        <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />
-                    )}
+                    render={() => <Profile store={props.store} dispatch={props.dispatch} />}
                 />
             </div>
         </div>
