@@ -27,7 +27,34 @@ let AddNewPostFormRedux = reduxForm({
     form: 'ProfileaddNewPostForm',
 })(AddNewPostForm);
 
-const MyPosts = (props) => {
+// class MyPosts extends React.PureComponent {
+//     // shouldComponentUpdate(nextProps, nextState) {
+//     //     return nextProps !== this.props || nextState !== this.state;
+//     // }
+//     render() {
+//         console.log('RENDER');
+
+//         let postsElements = this.props.posts.map((elem) => (
+//             <Post message={elem.message} likesCount={elem.likesCount} key={elem.id} />
+//         ));
+
+//         const onAddPost = (values) => {
+//             this.props.addPost(values.newPostText);
+//         };
+
+//         return (
+//             <div className={styles.posts_block}>
+//                 <h3>My posts</h3>
+//                 <AddNewPostFormRedux onSubmit={onAddPost} />
+//                 <div className={styles.posts}>{postsElements}</div>
+//             </div>
+//         );
+//     }
+// }
+
+const MyPosts = React.memo((props) => {
+    console.log('RENDER');
+
     let postsElements = props.posts.map((elem) => (
         <Post message={elem.message} likesCount={elem.likesCount} key={elem.id} />
     ));
@@ -43,6 +70,6 @@ const MyPosts = (props) => {
             <div className={styles.posts}>{postsElements}</div>
         </div>
     );
-};
+});
 
 export default MyPosts;

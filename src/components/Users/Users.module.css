@@ -3,17 +3,3 @@
     /* height: 200px; */
     border-radius: 50%;
 }
-
-.selected_page {
-    font-weight: bold;
-}
-
-.pagination_buttons {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.pagination_buttons span {
-    cursor: pointer;
-    margin-right: 5px;
-}
