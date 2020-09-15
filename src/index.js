@@ -8,17 +8,20 @@ import './index.css';
 import App from './App';
 import store from './redux/redux-store';
 import { Provider } from 'react-redux';
+import SamuraiJSApp from './App';
 
 ReactDOM.render(
     // <React.StrictMode>
 
     // </React.StrictMode>,
     // Вставить BrowserRouter обратно по завершению проекта - избежали двойных рендеров
-    <BrowserRouter>
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </BrowserRouter>,
+
+    // <BrowserRouter>
+    //     <Provider store={store}>
+    //         <App />
+    //     </Provider>
+    // </BrowserRouter>,
+    <SamuraiJSApp />,
     document.getElementById('root'),
 );
 
