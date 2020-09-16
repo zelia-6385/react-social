@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Users.module.css';
+// import styles from './Users.module.css';
 import Paginator from '../common/Paginator/Paginator';
 import User from './User';
 
@@ -8,7 +8,7 @@ const Users = ({ currentPage, totalUsersCount, pageSize, onPageChanged, users, .
         <div>
             <Paginator
                 currentPage={currentPage}
-                totalUsersCount={totalUsersCount}
+                totalItemsCount={totalUsersCount}
                 pageSize={pageSize}
                 onPageChanged={onPageChanged}
             />
