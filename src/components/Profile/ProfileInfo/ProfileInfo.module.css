@@ -5,3 +5,13 @@
 .main_photo {
     max-width: 200px;
 }
+
+.contact {
+    padding-left: 10px;
+}
+
+.form_summary_error {
+    border: 1px solid red;
+    padding: 5px;
+    color: red;
+}
